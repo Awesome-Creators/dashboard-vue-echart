@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="basis-layout">
     <dashboard-title></dashboard-title>
     <router-view></router-view>
   </div>
@@ -13,4 +13,10 @@ export default {
 };
 </script>
 
-<style></style>
+<style lang="scss" scoped>
+.basis-layout {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+</style>

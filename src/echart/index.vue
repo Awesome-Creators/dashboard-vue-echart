@@ -52,7 +52,6 @@ export default {
   methods: {
     initChart() {
       // 初始化echart
-      console.log(this.$el, "123");
       this.chart = this.$echarts.init(this.$el, "tdTheme");
       this.chart.setOption(this.options, true);
     },

@@ -9,6 +9,7 @@ import * as echarts from "echarts";
 Vue.prototype.$echarts = echarts;
 
 import "./scss/my-reset.scss";
+import "./scss/my-common.scss";
 
 Vue.config.productionTip = false;
 Vue.use(Storage, defaultSetting.storageOptions);
