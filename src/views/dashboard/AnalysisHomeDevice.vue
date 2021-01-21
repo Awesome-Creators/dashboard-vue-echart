@@ -1,5 +1,5 @@
 <template>
-  <chart-card height="25%" title="当前点位信息"></chart-card>
+  <chart-card height="35%" title="当前点位信息"></chart-card>
 </template>
 
 <script>

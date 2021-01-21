@@ -1,8 +1,8 @@
 <template>
   <div class="dashboard-title">
     <nav-tab v-if="navTab"></nav-tab>
+    <span class="time">{{ nowTime }}</span>
     <main-title></main-title>
-    <span>{{ nowTime }}</span>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
   components: { MainTitle, NavTab },
   data() {
     return {
-      nowTime: new Date(),
+      nowTime: dayjs().format("YYYY-MM-DD hh:mm:ss"),
       nowTimeId: null,
     };
   },
@@ -29,7 +29,7 @@ export default {
         clearTimeout(this.nowTimeId);
       }
       setTimeout(() => {
-        this.nowTime = dayjs().format("yyyy-MM-DD hh:mm:ss");
+        this.nowTime = dayjs().format("YYYY-MM-DD hh:mm:ss");
         console.log(this.nowTime);
         this.refreshNowTime();
       }, 1000);
@@ -46,7 +46,10 @@ export default {
   z-index: 9;
   // position: relative;
   .time {
-    float:right;
+    float: right;
+    margin-right: 10px;
+    font-size: 20px;
+    margin-top: 10px;
   }
 }
 </style>
